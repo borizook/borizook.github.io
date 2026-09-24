@@ -3,24 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Search-engine metadata: does not alter the visible page -->
   <title>Jun-Sik Lim | Infectious Disease Epidemiologist</title>
   <meta name="description" content="Official academic website of Jun-Sik Lim, DVM, MPH, PhD — veterinarian and quantitative infectious disease epidemiologist working on surveillance, wildlife and multi-host systems, spatiotemporal epidemiology, Bayesian methods, and mechanistic modelling.">
   <meta name="author" content="Jun-Sik Lim">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-
-  <!-- Social/search previews -->
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Jun-Sik Lim | Infectious Disease Epidemiologist">
   <meta property="og:description" content="Veterinarian and quantitative infectious disease epidemiologist studying surveillance, wildlife and multi-host systems, and infectious disease transmission.">
   <meta property="profile:first_name" content="Jun-Sik">
   <meta property="profile:last_name" content="Lim">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Jun-Sik Lim | Infectious Disease Epidemiologist">
-  <meta name="twitter:description" content="Veterinarian and quantitative infectious disease epidemiologist studying surveillance, wildlife and multi-host systems, and infectious disease transmission.">
-
-  <!-- Structured data to help search engines connect this site with the same researcher elsewhere -->
+  <link rel="stylesheet" href="assets/site.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -28,36 +20,11 @@
     "mainEntity": {
       "@type": "Person",
       "name": "Jun-Sik Lim",
-      "alternateName": [
-        "Jun Sik Lim",
-        "LIM Jun-Sik",
-        "Jun-Sik LIM"
-      ],
-      "honorificSuffix": [
-        "DVM",
-        "MPH",
-        "PhD"
-      ],
+      "alternateName": ["Jun Sik Lim", "LIM Jun-Sik", "Jun-Sik LIM"],
+      "honorificSuffix": ["DVM", "MPH", "PhD"],
       "jobTitle": "Research Fellow",
       "description": "Veterinarian and quantitative infectious disease epidemiologist studying infectious disease surveillance and inference under imperfect observation, with a focus on wildlife and multi-host systems.",
-      "affiliation": {
-        "@type": "CollegeOrUniversity",
-        "name": "National University of Singapore"
-      },
-      "alumniOf": [
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Université de Toulouse"
-        },
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Seoul National University"
-        },
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Kyungpook National University"
-        }
-      ],
+      "affiliation": {"@type": "CollegeOrUniversity", "name": "National University of Singapore"},
       "sameAs": [
         "https://sph.nus.edu.sg/faculty-directory/lim-jun-sik/",
         "https://scholar.google.com/citations?user=Qji39HAAAAAJ",
@@ -67,206 +34,24 @@
     }
   }
   </script>
-
-  <style>
-    :root{
-      --text:#111111;
-      --muted:#666666;
-      --line:#dddddd;
-      --accent:#b3132b;
-      --bg:#ffffff;
-      --max:780px;
-    }
-
-    *{box-sizing:border-box}
-
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family:Arial,Helvetica,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-    }
-
-    a{
-      color:var(--accent);
-      text-decoration:none;
-    }
-
-    a:hover{text-decoration:underline}
-
-    .page{
-      width:min(var(--max),calc(100% - 36px));
-      margin:0 auto;
-      padding:56px 0 72px;
-    }
-
-    header{
-      padding-bottom:28px;
-      border-bottom:1px solid var(--line);
-    }
-
-    .profile-header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:40px;
-    }
-
-    .profile-text{
-      flex:1;
-      min-width:0;
-    }
-
-    .profile-photo{
-      width:150px;
-      height:190px;
-      object-fit:cover;
-      object-position:center top;
-      flex:0 0 auto;
-    }
-
-    h1{
-      margin:0 0 8px;
-      font-size:34px;
-      line-height:1.15;
-      font-weight:700;
-      letter-spacing:-0.03em;
-    }
-
-    .title{
-      margin:0;
-      font-size:17px;
-      color:var(--muted);
-    }
-
-    .affiliation{
-      margin:4px 0 0;
-      font-size:15px;
-      color:var(--muted);
-    }
-
-    .links{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      margin-top:18px;
-      font-size:14px;
-    }
-
-    section{
-      padding:28px 0;
-      border-bottom:1px solid var(--line);
-    }
-
-    h2{
-      margin:0 0 14px;
-      font-size:18px;
-      font-weight:700;
-      letter-spacing:-0.01em;
-    }
-
-    p{
-      margin:0;
-      font-size:15px;
-    }
-
-    ul{
-      margin:0;
-      padding-left:20px;
-    }
-
-    li{
-      margin:7px 0;
-      font-size:15px;
-    }
-
-    .pub{
-      margin-bottom:18px;
-    }
-
-    .pub:last-child{
-      margin-bottom:0;
-    }
-
-    .pub-title{
-      font-size:15px;
-      font-weight:600;
-      line-height:1.45;
-    }
-
-    .pub-title a{
-      color:var(--text);
-    }
-
-    .pub-title a:hover{
-      color:var(--accent);
-      text-decoration:none;
-    }
-
-    .pub-meta{
-      margin-top:2px;
-      font-size:13px;
-      color:var(--muted);
-    }
-
-    .background-item{
-      margin-bottom:14px;
-      font-size:15px;
-    }
-
-    .background-item:last-child{
-      margin-bottom:0;
-    }
-
-    .year{
-      color:var(--muted);
-      display:inline-block;
-      min-width:105px;
-    }
-
-    footer{
-      padding-top:24px;
-      font-size:13px;
-      color:var(--muted);
-    }
-
-    @media(max-width:560px){
-      .page{padding-top:36px}
-
-      .profile-header{
-        flex-direction:column-reverse;
-        align-items:flex-start;
-        gap:24px;
-      }
-
-      .profile-photo{
-        width:120px;
-        height:150px;
-      }
-
-      h1{font-size:30px}
-      .year{
-        display:block;
-        min-width:0;
-        margin-bottom:2px;
-      }
-    }
-  </style>
 </head>
-
 <body>
   <main class="page">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html">Jun-Sik Lim</a>
+      <div class="nav-links">
+        <a class="active" href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="talks-service.html">Talks &amp; Service</a>
+        <a href="cv.html">CV</a>
+      </div>
+    </nav>
 
     <header class="profile-header">
       <div class="profile-text">
         <h1>Jun-Sik Lim, DVM, MPH, PhD</h1>
         <p class="title">Veterinarian and quantitative infectious disease epidemiologist</p>
-        <p class="affiliation">
-          Research Fellow, Saw Swee Hock School of Public Health, National University of Singapore
-        </p>
-
+        <p class="affiliation">Research Fellow, Saw Swee Hock School of Public Health, National University of Singapore</p>
         <div class="links">
           <a href="mailto:jun-sik.lim@nus.edu.sg">Email</a>
           <a href="https://scholar.google.com/citations?user=Qji39HAAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
@@ -274,24 +59,36 @@
           <a href="https://github.com/borizook" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
-
-      <img src="assets/profile.png"
-           alt="Jun-Sik Lim, veterinarian and quantitative infectious disease epidemiologist"
-           class="profile-photo"
-           width="150"
-           height="190"
-           decoding="async"
-           fetchpriority="high">
+      <img src="assets/profile.png" alt="Jun-Sik Lim, veterinarian and quantitative infectious disease epidemiologist" class="profile-photo" width="150" height="190" decoding="async" fetchpriority="high">
     </header>
 
     <section>
       <h2>About</h2>
-      <p>
-        I study how infectious disease surveillance and inference can be improved when infection processes
-        are only partially observed. My work focuses on wildlife and multi-host systems, using spatiotemporal
-        epidemiology, Bayesian methods, and mechanistic models to understand transmission processes and support
-        better surveillance decisions.
-      </p>
+      <p>I study how infectious disease surveillance and inference can be improved when infection processes are only partially observed. My work focuses on wildlife and multi-host systems, using spatiotemporal epidemiology, Bayesian methods, and mechanistic models to understand transmission processes and support better surveillance decisions.</p>
+    </section>
+
+    <section>
+      <h2>Research</h2>
+      <p class="muted">Explore my publications by epidemiological domain.</p>
+      <div class="area-grid">
+        <a class="area-card" href="wildlife-disease-epidemiology.html">
+          <div class="kicker">Research area</div><div class="name">Wildlife Disease Epidemiology</div>
+          <div class="desc">Transmission, spatial spread, surveillance, and inference in free-ranging wildlife populations.</div>
+        </a>
+        <a class="area-card" href="zoonotic-epidemiology.html">
+          <div class="kicker">Research area</div><div class="name">Zoonotic Epidemiology</div>
+          <div class="desc">Infections and spillover across animal–human interfaces and multi-host systems.</div>
+        </a>
+        <a class="area-card" href="human-infectious-disease-epidemiology.html">
+          <div class="kicker">Research area</div><div class="name">Human Infectious Disease Epidemiology</div>
+          <div class="desc">Transmission dynamics, outbreak inference, and epidemiological parameters in human populations.</div>
+        </a>
+        <a class="area-card" href="livestock-infectious-epidemiology.html">
+          <div class="kicker">Research area</div><div class="name">Livestock Infectious Epidemiology</div>
+          <div class="desc">Disease transmission, risk prediction, and control in livestock production systems.</div>
+        </a>
+      </div>
+      <p style="margin-top:17px;font-size:14px;"><a href="research.html">View all research areas →</a></p>
     </section>
 
     <section>
@@ -301,154 +98,27 @@
         <li>Spatiotemporal epidemiology of wildlife and multi-host infectious diseases</li>
         <li>Mechanistic modelling of infectious disease transmission</li>
       </ul>
-      <p class="pub-meta" style="margin-top:14px;">
-        <strong style="color:#111111;">Current focus:</strong>
-        infectious disease surveillance under imperfect observation and wildlife–multi-host disease systems under environmental change.
-      </p>
-    </section>
-
-    <section>
-      <h2>Selected publications</h2>
-
-      <div class="pub">
-        <div class="pub-title">
-          <a href="https://doi.org/10.1016/j.onehlt.2025.101274" target="_blank" rel="noopener">Association between bat-predator species richness and Nipah virus spillover risk in Bangladesh</a>
-        </div>
-        <div class="pub-meta">One Health, 2025</div>
-      </div>
-
-      <div class="pub">
-        <div class="pub-title">
-          <a href="https://doi.org/10.1186/s13567-024-01422-7" target="_blank" rel="noopener">A spatially heterogeneous impact of fencing on the African swine fever wavefront in the Korean wild boar population</a>
-        </div>
-        <div class="pub-meta">Veterinary Research, 2024</div>
-      </div>
-
-      <div class="pub">
-        <div class="pub-title">
-          <a href="https://doi.org/10.1155/2023/4686980" target="_blank" rel="noopener">Three Years of African Swine Fever in South Korea (2019–2021): A Scoping Review of Epidemiological Understanding</a>
-        </div>
-        <div class="pub-meta">Transboundary and Emerging Diseases, 2023</div>
-      </div>
-
-      <div class="pub">
-        <div class="pub-title">
-          <a href="https://doi.org/10.1038/s41598-019-43043-7" target="_blank" rel="noopener">Spatial analysis to assess the relationship between human and bovine brucellosis in South Korea, 2005–2010</a>
-        </div>
-        <div class="pub-meta">Scientific Reports, 2019</div>
-      </div>
-
-      <p style="margin-top:18px;font-size:14px;">
-        <a href="https://scholar.google.com/citations?user=Qji39HAAAAAJ" target="_blank" rel="noopener">
-          Full publication list →
-        </a>
-      </p>
+      <p class="pub-meta" style="margin-top:14px;"><strong style="color:#111111;">Current focus:</strong> infectious disease surveillance under imperfect observation and wildlife–multi-host disease systems under environmental change.</p>
     </section>
 
     <section>
       <h2>Background</h2>
-
-      <div class="background-item">
-        <span class="year">2025–Present</span>
-        Research Fellow, National University of Singapore, Singapore
-        <div class="pub-meta">Supervisor: A/Prof. Kimberly Fornace</div>
-      </div>
-
-      <div class="background-item">
-        <span class="year">2021–2024</span>
-        PhD in Veterinary Epidemiology, Université de Toulouse, France
-        <div class="pub-meta">Host institute: École Nationale Vétérinaire de Toulouse (ENVT)</div>
-        <div class="pub-meta">Supervisors: A/Prof. Timothée Vergne and Dr Mathieu Andraud</div>
-      </div>
-
-      <div class="background-item">
-        <span class="year">2017–2019</span>
-        MPH in Epidemiology, Seoul National University, South Korea
-        <div class="pub-meta">Supervisor: Prof. Sung-Il Cho · Valedictorian</div>
-      </div>
-
-      <div class="background-item">
-        <span class="year">2010–2016</span>
-        DVM, Kyungpook National University, South Korea
-        <div class="pub-meta">Summa Cum Laude · Presidential Award</div>
-      </div>
+      <div class="background-item"><span class="year">2025–Present</span> Research Fellow, National University of Singapore, Singapore<div class="pub-meta">Supervisor: A/Prof. Kimberly Fornace</div></div>
+      <div class="background-item"><span class="year">2021–2024</span> PhD in Veterinary Epidemiology, Université de Toulouse, France<div class="pub-meta">Host institute: École Nationale Vétérinaire de Toulouse (ENVT)</div><div class="pub-meta">Supervisors: A/Prof. Timothée Vergne and Dr Mathieu Andraud</div></div>
+      <div class="background-item"><span class="year">2017–2019</span> MPH in Epidemiology, Seoul National University, South Korea<div class="pub-meta">Supervisor: Prof. Sung-Il Cho · Valedictorian</div></div>
+      <div class="background-item"><span class="year">2010–2016</span> DVM, Kyungpook National University, South Korea<div class="pub-meta">Summa Cum Laude · Presidential Award</div></div>
     </section>
-
 
     <section>
       <h2>Professional experience</h2>
-
-      <div class="background-item">
-        <span class="year">2025–Present</span>
-        Research Fellow, Saw Swee Hock School of Public Health, National University of Singapore, Singapore
-        <div class="pub-meta">Quantitative research on zoonotic and vector-borne disease surveillance under environmental change.</div>
-      </div>
-
-      <div class="background-item">
-        <span class="year">2021</span>
-        Research Associate, Konyang University, South Korea
-        <div class="pub-meta">Transmission-dynamics research on SARS-CoV-2 using Bayesian statistical methods.</div>
-      </div>
-
-      <div class="background-item">
-        <span class="year">2020</span>
-        Research Associate, Kangwon National University, South Korea
-        <div class="pub-meta">Spatial epidemiology and modelling of African swine fever in wild boar populations.</div>
-      </div>
-
-      <div class="background-item">
-        <span class="year">2019</span>
-        Research Associate, Animal and Plant Quarantine Agency, South Korea
-        <div class="pub-meta">Epidemiological research and risk modelling for highly pathogenic avian influenza.</div>
-      </div>
-
-      <div class="background-item">
-        <span class="year">2016–2019</span>
-        Veterinary Officer, Gyeonggi Provincial Veterinary Service Center, South Korea
-        <div class="pub-meta">Animal disease surveillance, outbreak investigation, field sampling, and laboratory diagnostics for major livestock diseases.</div>
-      </div>
+      <div class="background-item"><span class="year">2025–Present</span> Research Fellow, Saw Swee Hock School of Public Health, National University of Singapore, Singapore<div class="pub-meta">Quantitative research on zoonotic and vector-borne disease surveillance under environmental change.</div></div>
+      <div class="background-item"><span class="year">2021</span> Research Associate, Konyang University, South Korea<div class="pub-meta">Transmission-dynamics research on SARS-CoV-2 using Bayesian statistical methods.</div></div>
+      <div class="background-item"><span class="year">2020</span> Research Associate, Kangwon National University, South Korea<div class="pub-meta">Spatial epidemiology and modelling of African swine fever in wild boar populations.</div></div>
+      <div class="background-item"><span class="year">2019</span> Research Associate, Animal and Plant Quarantine Agency, South Korea<div class="pub-meta">Epidemiological research and risk modelling for highly pathogenic avian influenza.</div></div>
+      <div class="background-item"><span class="year">2016–2019</span> Veterinary Officer, Gyeonggi Provincial Veterinary Service Center, South Korea<div class="pub-meta">Animal disease surveillance, outbreak investigation, field sampling, and laboratory diagnostics for major livestock diseases.</div></div>
     </section>
 
-    <section>
-      <h2>Selected invited talks</h2>
-
-      <div class="background-item">
-        <span class="year">2026</span>
-        Association between Predator Biodiversity and Nipah Virus Spillover Risk
-        <div class="pub-meta">NUHS Scientific & Innovation Summit</div>
-      </div>
-
-      <div class="background-item">
-        <span class="year">2025</span>
-        Invisible Wildlife Signals: Understanding Under-detection in Wildlife Disease Surveillance
-        <div class="pub-meta">Wildlife Disease Association Global Voice</div>
-      </div>
-
-      <div class="background-item">
-        <span class="year">2025</span>
-        Epidemiological Approach for Emerging Infectious Diseases
-        <div class="pub-meta">College of Veterinary Medicine, Seoul National University</div>
-      </div>
-
-      <div class="background-item">
-        <span class="year">2025</span>
-        Epidemiological Research on ASF in Wild Boar Populations
-        <div class="pub-meta">Animal and Plant Quarantine Agency, Republic of Korea</div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Academic service</h2>
-      <p>
-        Editorial Board Member and Guest Editor, <em>npj Veterinary Science</em>; reviewer for journals
-        in veterinary epidemiology, One Health, infectious disease modelling, and public health.
-      </p>
-    </section>
-
-    <footer>
-      Jun-Sik Lim · Singapore
-    </footer>
-
+    <footer>Jun-Sik Lim · Singapore</footer>
   </main>
 </body>
 </html>
