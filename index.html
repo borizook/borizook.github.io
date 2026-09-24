@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Jun-Sik Lim — quantitative infectious disease epidemiologist.">
+  <meta name="description" content="Jun-Sik Lim — veterinarian and quantitative infectious disease epidemiologist.">
   <title>Jun-Sik Lim</title>
 
   <style>
@@ -32,7 +32,9 @@
       text-decoration:none;
     }
 
-    a:hover{text-decoration:underline}
+    a:hover{
+      text-decoration:underline;
+    }
 
     .page{
       width:min(var(--max),calc(100% - 36px));
@@ -43,6 +45,26 @@
     header{
       padding-bottom:28px;
       border-bottom:1px solid var(--line);
+    }
+
+    .profile-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:40px;
+    }
+
+    .profile-text{
+      flex:1;
+      min-width:0;
+    }
+
+    .profile-photo{
+      width:150px;
+      height:190px;
+      object-fit:cover;
+      object-position:center top;
+      flex:0 0 auto;
     }
 
     h1{
@@ -151,8 +173,25 @@
     }
 
     @media(max-width:560px){
-      .page{padding-top:36px}
-      h1{font-size:30px}
+      .page{
+        padding-top:36px;
+      }
+
+      .profile-header{
+        flex-direction:column-reverse;
+        align-items:flex-start;
+        gap:24px;
+      }
+
+      .profile-photo{
+        width:120px;
+        height:150px;
+      }
+
+      h1{
+        font-size:30px;
+      }
+
       .year{
         display:block;
         min-width:0;
@@ -165,19 +204,23 @@
 <body>
   <main class="page">
 
-    <header>
-      <h1>Jun-Sik Lim, DVM, MPH, PhD</h1>
-      <p class="title">Veterinarian and quantitative infectious disease epidemiologist</p>
-      <p class="affiliation">
-        Research Fellow, Saw Swee Hock School of Public Health, National University of Singapore
-      </p>
+    <header class="profile-header">
+      <div class="profile-text">
+        <h1>Jun-Sik Lim, DVM, MPH, PhD</h1>
+        <p class="title">Veterinarian and quantitative infectious disease epidemiologist</p>
+        <p class="affiliation">
+          Research Fellow, Saw Swee Hock School of Public Health, National University of Singapore
+        </p>
 
-      <div class="links">
-        <a href="mailto:jun-sik.lim@nus.edu.sg">Email</a>
-        <a href="https://scholar.google.com/citations?user=Qji39HAAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-        <a href="https://orcid.org/0000-0003-4645-2347" target="_blank" rel="noopener">ORCID</a>
-        <a href="https://github.com/borizook" target="_blank" rel="noopener">GitHub</a>
+        <div class="links">
+          <a href="mailto:jun-sik.lim@nus.edu.sg">Email</a>
+          <a href="https://scholar.google.com/citations?user=Qji39HAAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://orcid.org/0000-0003-4645-2347" target="_blank" rel="noopener">ORCID</a>
+          <a href="https://github.com/borizook" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </div>
+
+      <img src="assets/profile.jpg" alt="Jun-Sik Lim" class="profile-photo">
     </header>
 
     <section>
@@ -208,28 +251,36 @@
 
       <div class="pub">
         <div class="pub-title">
-          <a href="https://doi.org/10.1016/j.onehlt.2025.101274" target="_blank" rel="noopener">Association between bat-predator species richness and Nipah virus spillover risk in Bangladesh</a>
+          <a href="https://doi.org/10.1016/j.onehlt.2025.101274" target="_blank" rel="noopener">
+            Association between bat-predator species richness and Nipah virus spillover risk in Bangladesh
+          </a>
         </div>
         <div class="pub-meta">One Health, 2025</div>
       </div>
 
       <div class="pub">
         <div class="pub-title">
-          <a href="https://doi.org/10.1186/s13567-024-01422-7" target="_blank" rel="noopener">A spatially heterogeneous impact of fencing on the African swine fever wavefront in the Korean wild boar population</a>
+          <a href="https://doi.org/10.1186/s13567-024-01422-7" target="_blank" rel="noopener">
+            A spatially heterogeneous impact of fencing on the African swine fever wavefront in the Korean wild boar population
+          </a>
         </div>
         <div class="pub-meta">Veterinary Research, 2024</div>
       </div>
 
       <div class="pub">
         <div class="pub-title">
-          <a href="https://doi.org/10.1155/2023/4686980" target="_blank" rel="noopener">Three Years of African Swine Fever in South Korea (2019–2021): A Scoping Review of Epidemiological Understanding</a>
+          <a href="https://doi.org/10.1155/2023/4686980" target="_blank" rel="noopener">
+            Three Years of African Swine Fever in South Korea (2019–2021): A Scoping Review of Epidemiological Understanding
+          </a>
         </div>
         <div class="pub-meta">Transboundary and Emerging Diseases, 2023</div>
       </div>
 
       <div class="pub">
         <div class="pub-title">
-          <a href="https://doi.org/10.1038/s41598-019-43043-7" target="_blank" rel="noopener">Spatial analysis to assess the relationship between human and bovine brucellosis in South Korea, 2005–2010</a>
+          <a href="https://doi.org/10.1038/s41598-019-43043-7" target="_blank" rel="noopener">
+            Spatial analysis to assess the relationship between human and bovine brucellosis in South Korea, 2005–2010
+          </a>
         </div>
         <div class="pub-meta">Scientific Reports, 2019</div>
       </div>
@@ -269,7 +320,6 @@
         <div class="pub-meta">Summa Cum Laude · Presidential Award</div>
       </div>
     </section>
-
 
     <section>
       <h2>Professional experience</h2>
