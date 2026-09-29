@@ -4,99 +4,172 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Surveillance Data Science | Jun-Sik Lim</title>
-  <meta name="description" content="Surveillance Data Science research programme of Jun-Sik Lim: inference from imperfect surveillance data, evaluation of additional information, and adaptive surveillance design.">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Surveillance Data Science research programme of Jun-Sik Lim: inference from imperfect surveillance data, evaluation of additional information, and robust and adaptive surveillance design.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<main class="page">
+<main class="page sds-page">
   <nav class="site-nav" aria-label="Primary navigation">
     <a class="brand" href="index.html">Jun-Sik Lim</a>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a class="active" href="research.html">Research</a>
+      <a href="research.html">Research</a>
+      <a class="active" href="surveillance-data-science.html">Surveillance Data Science</a>
       <a href="talks-service.html">Talks &amp; Service</a>
       <a href="cv.html">CV</a>
     </div>
   </nav>
 
-  <div class="section-intro">
+  <header class="sds-hero">
     <div class="breadcrumb"><a href="index.html">Home</a> / <a href="research.html">Research</a> / Surveillance Data Science</div>
-    <h1 class="page-title">Surveillance Data Science</h1>
-    <p class="lede">From imperfect observations to better surveillance decisions.</p>
-  </div>
+    <div class="sds-eyebrow">Research programme</div>
+    <h1 class="sds-title">Surveillance Data Science</h1>
+    <p class="sds-subtitle">From imperfect observations to better surveillance decisions.</p>
+
+    <div class="sds-question">
+      <div class="sds-question-label">Core question</div>
+      <p>What should we observe next, and where should limited surveillance resources be allocated?</p>
+    </div>
+  </header>
 
   <section>
-    <p>Surveillance Data Science asks what surveillance data reveal about latent infection risk, when additional information improves inference and decisions, and how the next observation should be designed under limited resources.</p>
+    <div class="sds-intro-grid">
+      <div>
+        <h2>Why surveillance data need a science of their own</h2>
+        <p>
+          Surveillance data do not directly reveal the underlying infection process. Detection probability,
+          surveillance effort, accessibility, sampling, testing, reporting, and differences between data sources
+          shape what becomes visible. My research separates these observation processes from latent infection risk,
+          then asks whether new information is valuable enough to change inference and real surveillance decisions.
+        </p>
+      </div>
+      <aside class="sds-principle">
+        <strong>Research principle</strong>
+        <p>More data are not automatically better data. The important question is whether an additional host, data source, location, or sample provides information that changes what we infer or what we decide to do.</p>
+      </aside>
+    </div>
   </section>
 
   <section>
-    <h2>Research framework</h2>
-    <div class="programme-list programme-list--compact">
-      <div class="programme-step">
-        <div class="programme-word">Infer</div>
-        <div>
-          <h3>What is happening beyond what we observe?</h3>
-          <p>Model latent infection processes separately from observation processes such as detection, surveillance effort, sampling, testing, and reporting.</p>
-        </div>
+    <h2>From observation to action</h2>
+    <p class="section-note">A sequential research framework links latent infection processes, observation processes, the value of additional information, and the design of the next observation.</p>
+
+    <div class="sds-flow" aria-label="Surveillance Data Science research framework">
+      <div class="sds-stage">
+        <div class="sds-stage-number">01</div>
+        <h3>Infer</h3>
+        <div class="sds-stage-question">What is happening beyond what we observe?</div>
+        <p>Separate latent infection processes from detection, surveillance effort, accessibility, testing, sampling, and reporting.</p>
       </div>
 
-      <div class="programme-step">
-        <div class="programme-word">Evaluate</div>
-        <div>
-          <h3>When does additional information have value?</h3>
-          <p>Evaluate whether another host or data source adds new information, improves prediction, and changes surveillance or control decisions.</p>
-        </div>
+      <div class="sds-stage">
+        <div class="sds-stage-number">02</div>
+        <h3>Evaluate</h3>
+        <div class="sds-stage-question">When does additional information have value?</div>
+        <p>Test whether another host or data source contributes new information rather than repeating what is already known.</p>
       </div>
 
-      <div class="programme-step">
-        <div class="programme-word">Design</div>
-        <div>
-          <h3>What should we observe next?</h3>
-          <p>Compare candidate observations across locations, hosts, and samples to identify where additional surveillance can most reduce uncertainty and improve decisions.</p>
-        </div>
+      <div class="sds-stage">
+        <div class="sds-stage-number">03</div>
+        <h3>Design</h3>
+        <div class="sds-stage-question">What should we observe next?</div>
+        <p>Compare locations, hosts, and samples to identify the next observation that best reduces uncertainty and improves decisions.</p>
       </div>
 
-      <div class="programme-step">
-        <div class="programme-word">Adapt</div>
-        <div>
-          <h3>When should a surveillance system change?</h3>
-          <p>Develop robust and adaptive strategies that can be maintained, adjusted, or redesigned as risks, information, and surveillance objectives change.</p>
-        </div>
+      <div class="sds-stage">
+        <div class="sds-stage-number">04</div>
+        <h3>Adapt</h3>
+        <div class="sds-stage-question">When should the surveillance system change?</div>
+        <p>Develop robust and adaptive designs that can be maintained, adjusted, or redesigned as risks and information change.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What counts as valuable information?</h2>
+    <p class="section-note">I distinguish statistical improvement from practical value by evaluating additional surveillance information at three levels.</p>
+
+    <div class="sds-value-grid">
+      <div class="sds-value">
+        <span class="sds-value-index">01</span>
+        <h3>Information value</h3>
+        <div class="question">Does it add information that was not already available?</div>
+        <p>Reduction in uncertainty about latent risk and conditional information beyond existing surveillance.</p>
+      </div>
+      <div class="sds-value">
+        <span class="sds-value-index">02</span>
+        <h3>Predictive value</h3>
+        <div class="question">Does it improve risk estimation or detection of high-risk areas?</div>
+        <p>Improvement in estimation error, sensitivity, specificity, or identification of epidemiologically important areas.</p>
+      </div>
+      <div class="sds-value">
+        <span class="sds-value-index">03</span>
+        <h3>Decision value</h3>
+        <div class="question">Does better prediction actually change surveillance or control choices?</div>
+        <p>Changes in priority areas, missed-risk reduction, or avoidance of unnecessary surveillance and response.</p>
       </div>
     </div>
   </section>
 
   <section>
     <h2>Quantitative approaches</h2>
-    <ul>
-      <li>Bayesian hierarchical models separating latent infection and observation processes</li>
-      <li>Simulation-based virtual surveillance experiments</li>
-      <li>Information value, predictive value, and decision value</li>
-      <li>Bayesian experimental design and active learning</li>
-      <li>Spatial and spatiotemporal modelling of infectious disease risk</li>
-    </ul>
+    <p class="section-note">The methods are selected to answer the surveillance question, not treated as ends in themselves.</p>
+    <div class="sds-approaches" aria-label="Quantitative approaches">
+      <span class="sds-approach">Bayesian hierarchical modelling</span>
+      <span class="sds-approach">Latent-process models</span>
+      <span class="sds-approach">Spatial &amp; spatiotemporal modelling</span>
+      <span class="sds-approach">Simulation-based virtual surveillance</span>
+      <span class="sds-approach">Value of information</span>
+      <span class="sds-approach">Bayesian experimental design</span>
+      <span class="sds-approach">Active learning</span>
+      <span class="sds-approach">AI &amp; machine-learning prediction</span>
+    </div>
   </section>
 
   <section>
-    <h2>Example systems</h2>
-    <div class="system-list">
-      <div class="system-item">
-        <h3>African swine fever</h3>
-        <p>Wild boar and domestic pig surveillance as a two-host system for studying the conditional value of additional host information.</p>
+    <h2>Systems for testing general principles</h2>
+    <p class="section-note">Different disease systems provide different combinations of host structure and observation processes, allowing the same surveillance questions to be tested under increasingly complex conditions.</p>
+
+    <div class="sds-systems">
+      <div class="sds-system">
+        <div>
+          <div class="sds-system-name">African swine fever</div>
+          <div class="sds-system-tags">Wild boar · Domestic pigs</div>
+        </div>
+        <p>A two-host system for testing when wildlife surveillance adds information beyond livestock surveillance, and under which epidemiological and observation conditions that information changes decisions.</p>
       </div>
-      <div class="system-item">
-        <h3>Highly pathogenic avian influenza</h3>
-        <p>Wild birds, poultry, and mammals as a more complex multi-host system in which information can be redundant, complementary, or differently prioritized.</p>
+
+      <div class="sds-system">
+        <div>
+          <div class="sds-system-name">Highly pathogenic avian influenza</div>
+          <div class="sds-system-tags">Wild birds · Poultry · Mammals</div>
+        </div>
+        <p>A more complex multi-host system for studying redundancy, complementarity, and the order in which host-specific surveillance information should be added.</p>
       </div>
-      <div class="system-item">
-        <h3>Human respiratory infections</h3>
-        <p>Clinical and wastewater surveillance as parallel observation processes of the same underlying community infection dynamics.</p>
+
+      <div class="sds-system">
+        <div>
+          <div class="sds-system-name">Human respiratory infections</div>
+          <div class="sds-system-tags">Clinical surveillance · Wastewater surveillance</div>
+        </div>
+        <p>A multi-source surveillance setting in which different observation processes capture the same underlying community infection dynamics.</p>
       </div>
-      <div class="system-item">
-        <h3>Zoonotic and vector-borne systems</h3>
-        <p>Integration of human, animal, vector, and environmental observations to evaluate when multiple data sources improve One Health surveillance.</p>
+
+      <div class="sds-system">
+        <div>
+          <div class="sds-system-name">One Health systems</div>
+          <div class="sds-system-tags">Human · Animal · Vector · Environment</div>
+        </div>
+        <p>A longer-term setting for linking heterogeneous data sources to surveillance resource allocation and testing how general surveillance-design principles perform in real systems.</p>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sds-vision">
+      <h2>Long-term direction</h2>
+      <p><strong>Surveillance should be treated as a sequential decision system.</strong> The goal is to infer what is currently hidden, identify what information is still missing, design the next observation, and update the surveillance system as new risks and evidence emerge.</p>
     </div>
   </section>
 
