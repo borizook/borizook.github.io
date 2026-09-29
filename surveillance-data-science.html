@@ -4,127 +4,209 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Surveillance Data Science | Jun-Sik Lim</title>
-  <meta name="description" content="Jun-Sik Lim's research programme on infectious disease surveillance, inference under imperfect observation, and surveillance design.">
+  <meta name="description" content="Jun-Sik Lim's research programme on inference from imperfect infectious disease surveillance data and the design of better surveillance systems.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="stylesheet" href="assets/site.css">
 
   <style>
-    /* Page-specific styles only. The rest of the site keeps the shared theme. */
+    /* Page-specific styling: restrained, academic, and consistent with the site. */
     .sds-intro{
-      padding:4px 0 30px;
+      padding:0 0 30px;
       border-bottom:1px solid var(--line);
     }
 
-    .sds-intro h1{
-      margin-bottom:12px;
-    }
-
-    .sds-intro p{
-      max-width:700px;
+    .sds-intro .subtitle{
+      max-width:690px;
+      margin-top:10px;
       color:#333;
       font-size:16px;
       line-height:1.65;
     }
 
-    .sds-intro p + p{
-      margin-top:10px;
+    .programme-note{
+      margin-top:24px;
+      padding:17px 18px 16px;
+      border:1px solid #d8d8d8;
+      background:#fafafa;
     }
 
-    .research-question{
-      margin:22px 0 0;
-      padding-left:16px;
-      border-left:3px solid var(--accent);
+    .programme-note strong{
+      display:block;
+      margin-bottom:4px;
+      font-size:13px;
+      color:var(--accent);
+    }
+
+    .programme-note p{
       font-family:Georgia,"Times New Roman",serif;
-      font-size:19px;
+      font-size:18px;
       line-height:1.5;
       color:#222;
     }
 
-    .plain-list{
-      margin:2px 0 0;
-      padding-left:19px;
+    .framework{
+      margin-top:18px;
+      border-top:2px solid #222;
+      border-bottom:2px solid #222;
     }
 
-    .plain-list li{
-      margin:10px 0;
-      padding-left:4px;
+    .framework-row{
+      display:grid;
+      grid-template-columns:46px 190px 1fr;
+      gap:16px;
+      align-items:start;
+      padding:16px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    .framework-row:last-child{
+      border-bottom:0;
+    }
+
+    .framework-step{
+      color:var(--accent);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.04em;
+    }
+
+    .framework-title{
+      font-size:14px;
+      font-weight:700;
+      line-height:1.45;
+    }
+
+    .framework-text{
+      color:#444;
+      font-size:14px;
       line-height:1.55;
     }
 
-    .value-list{
+    .value-sequence{
+      display:grid;
+      grid-template-columns:1fr auto 1fr auto 1fr;
+      align-items:center;
+      gap:12px;
+      margin-top:18px;
+      padding:16px 0;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .value-item strong{
+      display:block;
+      margin-bottom:4px;
+      font-size:14px;
+    }
+
+    .value-item span{
+      display:block;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.5;
+    }
+
+    .value-arrow{
+      color:#999;
+      font-size:18px;
+    }
+
+    .question-list{
+      margin:2px 0 0;
+      padding:0;
+      list-style:none;
+      counter-reset:sdsq;
+      border-top:1px solid var(--line);
+    }
+
+    .question-list li{
+      counter-increment:sdsq;
+      display:grid;
+      grid-template-columns:34px 1fr;
+      gap:12px;
+      margin:0;
+      padding:13px 0;
+      border-bottom:1px solid var(--line);
+      line-height:1.55;
+    }
+
+    .question-list li::before{
+      content:counter(sdsq, decimal-leading-zero);
+      color:var(--accent);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .systems-table{
       margin-top:8px;
       border-top:1px solid var(--line);
     }
 
-    .value-row{
+    .systems-row{
       display:grid;
-      grid-template-columns:145px 1fr;
-      gap:22px;
+      grid-template-columns:200px 1fr;
+      gap:24px;
       padding:14px 0;
       border-bottom:1px solid var(--line);
     }
 
-    .value-row strong{
-      font-size:14px;
-    }
-
-    .value-row span{
-      color:#444;
-      font-size:14px;
-      line-height:1.55;
-    }
-
-    .direction-list{
-      margin-top:8px;
-      border-top:1px solid var(--line);
-    }
-
-    .direction-row{
-      display:grid;
-      grid-template-columns:205px 1fr;
-      gap:24px;
-      padding:15px 0;
-      border-bottom:1px solid var(--line);
-    }
-
-    .direction-name{
+    .systems-name{
       font-size:14px;
       font-weight:700;
     }
 
-    .direction-detail{
+    .systems-detail{
       color:#444;
       font-size:14px;
       line-height:1.55;
     }
 
-    .aside-note{
-      margin-top:16px;
-      color:var(--muted);
-      font-size:13px;
-      font-style:italic;
-    }
-
-    .method-line{
+    .methods{
       color:#333;
-      line-height:1.65;
+      line-height:1.7;
     }
 
-    .method-line strong{
+    .methods strong{
       color:var(--text);
     }
 
-    @media(max-width:560px){
-      .sds-intro p{font-size:15px}
-      .research-question{font-size:18px}
-      .value-row,
-      .direction-row{
+    .closing{
+      margin-top:14px;
+      padding-top:14px;
+      border-top:1px solid var(--line);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:17px;
+      line-height:1.55;
+      color:#2a2a2a;
+    }
+
+    @media(max-width:620px){
+      .framework-row{
+        grid-template-columns:34px 1fr;
+        gap:5px 12px;
+      }
+      .framework-text{
+        grid-column:2;
+      }
+      .systems-row{
         grid-template-columns:1fr;
         gap:3px;
+      }
+      .value-sequence{
+        grid-template-columns:1fr;
+        gap:8px;
+      }
+      .value-arrow{
+        transform:rotate(90deg);
+        justify-self:start;
+        margin-left:8px;
       }
     }
   </style>
 </head>
+
 <body>
 <main class="page">
   <nav class="site-nav" aria-label="Primary navigation">
@@ -141,112 +223,126 @@
   <header class="sds-intro">
     <div class="breadcrumb"><a href="index.html">Home</a> / Surveillance Data Science</div>
     <h1>Surveillance Data Science</h1>
-    <p>
-      This is the name I use for a line of research that has gradually emerged from my work on
-      infectious disease transmission in wildlife, livestock, and human populations.
+    <p class="subtitle">
+      My research asks how much we can learn from imperfect surveillance data, when an additional source of information is genuinely useful, and how those answers should change what we observe next.
     </p>
-    <p>
-      The starting point is simple: surveillance data are observations of an infection process,
-      not the process itself. What we see depends on where we look, how intensively we look,
-      who gets tested, and what can be detected and reported.
-    </p>
-    <div class="research-question">
-      What do the data actually tell us, and what should we observe next?
+
+    <div class="programme-note">
+      <strong>Central question</strong>
+      <p>What do the data actually tell us, and what should we observe next?</p>
     </div>
   </header>
 
   <section>
-    <h2>What I am trying to understand</h2>
+    <h2>Research framework</h2>
     <p>
-      My earlier work was mainly about transmission: how infections spread through space, between
-      individuals, and across host populations. Working with surveillance data made another problem
-      increasingly difficult to ignore. The observed pattern may reflect both the underlying infection
-      process and the way surveillance was carried out.
+      Surveillance data are generated by both an infection process and an observation process. My work treats these two processes separately, then connects inference to the design of the next observation.
     </p>
-    <p style="margin-top:12px;">
-      I therefore treat the observation process as part of the epidemiological problem. From there,
-      the question naturally moves from estimating current risk to deciding whether another source of
-      information is worth collecting, and eventually to deciding where limited surveillance effort
-      should go next.
-    </p>
+
+    <div class="framework" aria-label="Surveillance Data Science research framework">
+      <div class="framework-row">
+        <div class="framework-step">01</div>
+        <div class="framework-title">Observation</div>
+        <div class="framework-text">Detection, sampling effort, accessibility, testing, and reporting determine how infection becomes visible in surveillance data.</div>
+      </div>
+      <div class="framework-row">
+        <div class="framework-step">02</div>
+        <div class="framework-title">Inference</div>
+        <div class="framework-text">Separate the observation process from the latent infection process and estimate the underlying spatial or temporal risk.</div>
+      </div>
+      <div class="framework-row">
+        <div class="framework-step">03</div>
+        <div class="framework-title">Added information</div>
+        <div class="framework-text">Ask whether another host, data source, or surveillance stream adds information that is not already contained in the existing system.</div>
+      </div>
+      <div class="framework-row">
+        <div class="framework-step">04</div>
+        <div class="framework-title">Surveillance design</div>
+        <div class="framework-text">Use the remaining uncertainty and decision problem to choose what, where, or when to observe next under limited resources.</div>
+      </div>
+      <div class="framework-row">
+        <div class="framework-step">05</div>
+        <div class="framework-title">Adaptation</div>
+        <div class="framework-text">Evaluate when the existing design remains adequate and when new risks or information justify adjustment or redesign.</div>
+      </div>
+    </div>
   </section>
 
   <section>
     <h2>Questions I am working on</h2>
-    <ul class="plain-list">
+    <ol class="question-list">
       <li>How much can we infer about latent infection risk from incomplete and selectively collected surveillance data?</li>
-      <li>When does information from another host or surveillance source add something genuinely new?</li>
-      <li>When does better prediction actually change a surveillance or control decision?</li>
+      <li>When does information from another host or surveillance source provide a genuinely new signal?</li>
+      <li>When does improved prediction change a surveillance or control decision?</li>
       <li>Where should the next sample, survey, or surveillance effort be placed?</li>
-      <li>When is an existing surveillance network good enough, and when should it be adjusted?</li>
-    </ul>
+      <li>When should an existing surveillance network be maintained, adjusted, or redesigned?</li>
+    </ol>
   </section>
 
   <section>
-    <h2>What counts as useful information?</h2>
+    <h2>Evaluating additional information</h2>
     <p>
-      I find it useful to separate three questions that are often treated as the same thing.
+      I separate the value of a new data source into three questions. Better prediction is useful, but it matters most when it changes what we would actually do.
     </p>
 
-    <div class="value-list">
-      <div class="value-row">
+    <div class="value-sequence" aria-label="Information, predictive, and decision value">
+      <div class="value-item">
         <strong>Information value</strong>
-        <span>Does a new source reduce uncertainty or provide a signal that is not already contained in the existing data?</span>
+        <span>Does it reduce uncertainty or reveal a signal that was previously missing?</span>
       </div>
-      <div class="value-row">
+      <div class="value-arrow" aria-hidden="true">→</div>
+      <div class="value-item">
         <strong>Predictive value</strong>
-        <span>Does that information improve estimation or help identify high-risk places that would otherwise be missed?</span>
+        <span>Does it improve risk estimation or identify high-risk places that would otherwise be missed?</span>
       </div>
-      <div class="value-row">
+      <div class="value-arrow" aria-hidden="true">→</div>
+      <div class="value-item">
         <strong>Decision value</strong>
-        <span>Does the improvement change which locations, hosts, or samples should actually be prioritised?</span>
+        <span>Does the improvement change which locations, hosts, or samples should be prioritised?</span>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Current directions</h2>
-    <div class="direction-list">
-      <div class="direction-row">
-        <div class="direction-name">African swine fever</div>
-        <div class="direction-detail">Wild boar and domestic pig surveillance — when does information from one host improve inference or decisions for the other?</div>
-      </div>
-      <div class="direction-row">
-        <div class="direction-name">Human respiratory infections</div>
-        <div class="direction-detail">Clinical and wastewater surveillance — what is gained when the same epidemic is observed through a different observation process?</div>
-      </div>
-      <div class="direction-row">
-        <div class="direction-name">Highly pathogenic avian influenza</div>
-        <div class="direction-detail">Wild birds, poultry, and mammals — which host information is complementary, redundant, or most useful to collect first?</div>
-      </div>
-      <div class="direction-row">
-        <div class="direction-name">One Health systems</div>
-        <div class="direction-detail">Human, animal, vector, and environmental data — how should heterogeneous surveillance streams be combined when resources are limited?</div>
-      </div>
-    </div>
-    <p class="aside-note">These are test beds for the same set of surveillance questions, rather than separate research programmes.</p>
-  </section>
-
-  <section>
-    <h2>How I approach the problem</h2>
-    <p class="method-line">
-      I use <strong>Bayesian hierarchical and spatiotemporal models</strong> to separate latent infection from observation,
-      <strong>mechanistic models</strong> when transmission structure matters, and <strong>simulation-based virtual surveillance experiments</strong>
-      when competing surveillance strategies cannot be compared directly in the real world. For the design problem, I am interested in
-      value-of-information analysis, Bayesian experimental design, and active learning.
-    </p>
-  </section>
-
-  <section>
-    <h2>Longer term</h2>
+    <h2>Systems I use to test these questions</h2>
     <p>
-      The longer-term aim is not to build a single optimal surveillance network. I am more interested in the conditions
-      under which a current design remains adequate, when targeted additional information is worth collecting, and when
-      the surveillance system itself needs to change.
+      These disease systems are not separate research programmes. I use them to test the same surveillance questions under different host structures and observation processes.
     </p>
-    <p style="margin-top:12px;">
-      In that sense, Surveillance Data Science is the part of my research that connects inference to the next decision:
-      from imperfect observations, to an estimate of what is happening, to a choice about what to observe next.
+
+    <div class="systems-table">
+      <div class="systems-row">
+        <div class="systems-name">African swine fever</div>
+        <div class="systems-detail">Wild boar and domestic pig surveillance; testing when information from one host improves inference or decisions for the other.</div>
+      </div>
+      <div class="systems-row">
+        <div class="systems-name">Human respiratory infections</div>
+        <div class="systems-detail">Clinical and wastewater surveillance; comparing different observation processes for the same underlying epidemic.</div>
+      </div>
+      <div class="systems-row">
+        <div class="systems-name">Highly pathogenic avian influenza</div>
+        <div class="systems-detail">Wild birds, poultry, and mammals; evaluating which host information is complementary, redundant, or most useful to collect first.</div>
+      </div>
+      <div class="systems-row">
+        <div class="systems-name">One Health systems</div>
+        <div class="systems-detail">Human, animal, vector, and environmental data; studying how heterogeneous surveillance streams should be combined when resources are limited.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Methods</h2>
+    <p class="methods">
+      Depending on the question, I use <strong>Bayesian hierarchical and spatiotemporal models</strong> to distinguish latent infection from observation, <strong>mechanistic models</strong> when transmission structure matters, and <strong>simulation-based virtual surveillance experiments</strong> when competing surveillance strategies cannot be compared directly in the real world. For surveillance design, I am interested in value-of-information analysis, Bayesian experimental design, and active learning.
+    </p>
+  </section>
+
+  <section>
+    <h2>Longer-term direction</h2>
+    <p>
+      The aim is not to build one universally optimal surveillance network. I want to understand the conditions under which a current design is sufficient, when targeted additional information is worth collecting, and when the surveillance system itself should change.
+    </p>
+    <p class="closing">
+      In this sense, Surveillance Data Science connects inference to the next decision: from imperfect observations, to an estimate of what is happening, to a choice about what should be observed next.
     </p>
   </section>
 
